@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<COMPONENT> 
+  <HEADER 
+  AUTHOR="vgalopin" 
+  COMPATIBILITY="ALL" 
+  DATA_AUTO_PROPAGATE="true" 
+  HAS_CONDITIONAL_OUTPUTS="false"
+  PLATEFORM="ALL" 
+  RELEASE_DATE="20141002A" 
+  SCHEMA_AUTO_PROPAGATE="true" 
+  SERIAL="" 
+  STARTABLE="false" 
+  STATUS="RELEASE" 
+  VERSION="1.0"> 
+    <SIGNATURE/> 
+  </HEADER>  
+  <FAMILIES> 
+    <FAMILY>Processing/Fields</FAMILY> 
+  </FAMILIES>  
+  <DOCUMENTATION> 
+    <URL/> 
+  </DOCUMENTATION>  
+  <CONNECTORS> 
+    <CONNECTOR CTYPE="FLOW" MAX_INPUT="1" MAX_OUTPUT="1"/> 
+  </CONNECTORS>  
+  <PARAMETERS> 
+    <PARAMETER FIELD="SCHEMA_TYPE" NAME="SCHEMA" NUM_ROW="2" READONLY="true" REQUIRED="true"/>
+    <PARAMETER
+      NAME="ACTIONS"
+      FIELD="TABLE"
+      REQUIRED="false"
+      NUM_ROW="3"
+      NB_LINES="8"
+      >
+      <ITEMS>
+        <ITEM NAME="COLUMN" FIELD="PREV_COLUMN_LIST" />
+      </ITEMS>
+    </PARAMETER>
+  </PARAMETERS>  
+  <CODEGENERATION>
+		<IMPORTS>
+			<IMPORT NAME="org JSON"
+				MODULE="org.json.jar"
+				REQUIRED="true" />
+		</IMPORTS>
+  </CODEGENERATION>  
+  <RETURNS> 
+    <RETURN AVAILABILITY="AFTER" NAME="NB_LINE" TYPE="id_Integer"/> 
+  </RETURNS> 
+</COMPONENT>
